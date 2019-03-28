@@ -5,8 +5,8 @@ Group Project
 First Deliverable: April 28th
 
 ## Team Description
-Members: Brandon Moore, Cameron Moore, MacKenzie Pennington
-Project 2: Performance Evaluation
+* Members: Brandon Moore, Cameron Moore, MacKenzie Pennington
+* Project 2: Performance Evaluation
 
 ## Benchmark Choices:
 * CPU - PXZ
