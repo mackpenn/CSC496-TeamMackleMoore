@@ -45,8 +45,7 @@ for i in range(5):
   iface.addAddress(pg.IPv4Address(prefixForIP + str(i + 1), "255.255.255.0"))
   link.addInterface(iface)
   
-  node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/passwordless.sh"))
-  node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_docker.sh"))
+  node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_kvm.sh"))
   
 # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
