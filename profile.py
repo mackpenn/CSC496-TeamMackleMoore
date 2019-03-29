@@ -29,7 +29,11 @@ prefixForIP = "192.168.1."
 
 link = request.LAN("lan")
 
-  node = request.RawPC("console")
+for i in range(5):
+  if i == 0:
+    node = request.RawPC("head")
+  else:
+    node = request.RawPC("worker-" + str(i))
   node.cores = 4
   node.ram = 4096
   node.routable_control_ip = "true"
