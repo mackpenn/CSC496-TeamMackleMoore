@@ -25,6 +25,7 @@ How fio works: The tool simulates a given I/O workload without resorting to writ
 * Fio will create threads and processes to do a particular type of I/O action, taking given parameters into consideration.
 * In the below case, fio is used to run several tests against a 16GB file stored on the SSD to test the block storage performance.
 * In measuring the sequential read/write performance of the storage over 60 seconds, there appears to be barely any difference between Native, Docker, and KVM when it comes to their throughput. However, KVM had a much larger performance variance than the other two, almost four times as much according to the article.
+![alt text](https://github.com/mackpenn/CSC496-TeamMackleMoore/blob/master/CC%20Pro%201%20(2).PNG "Graph 1")
 * The differences are more apparent in the graph plotting the random read/write/mixed performance of the storage. Native and Docker yet again have barely any differences in their IOPS (I/O Operations per Second), while KVM only provides half the operations per second that they do.
     - KVM’s is halved because each I/O operation must go through QEMU, or  a Quick Emulator.
 
