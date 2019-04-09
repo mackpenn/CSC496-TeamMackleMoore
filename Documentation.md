@@ -42,6 +42,7 @@ How fio works: The tool simulates a given I/O workload without resorting to writ
 * https://www.instructables.com/id/How-to-benchmark-an-intel-CPU/
 * https://hub.docker.com/r/elreyes/linpack
 * https://hub.docker.com/r/stuts/intel-linpack-64bit/
+* https://pdfs.semanticscholar.org/5f29/c237a89cb8535da43f1e0b693648e9fdbd34.pdf (!!important guide to benchmarking with Linpack!!)
 
 
 #### Fio
@@ -50,3 +51,4 @@ How fio works: The tool simulates a given I/O workload without resorting to writ
 * https://hub.docker.com/r/clusterhq/fio-tool/
 * https://linux.die.net/man/1/fio
 * https://dotlayer.com/how-to-use-fio-to-measure-disk-performance-in-linux/
+* https://wiki.mikejung.biz/Benchmarking (!!important guide to benchmarking with Fio!!)
