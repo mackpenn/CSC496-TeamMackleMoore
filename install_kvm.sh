@@ -11,5 +11,5 @@ cd streamDirectory
 sudo wget https://www.cs.virginia.edu/stream/FTP/Code/stream.c
 sudo wget https://www.cs.virginia.edu/stream/FTP/Code/mysecond.c
 sudo gcc -O stream.c -o stream
-sudo touch Output.txt
-./stream > Output.txt
+sudo touch StreamOutput.txt
+./stream > StreamOutput.txt
