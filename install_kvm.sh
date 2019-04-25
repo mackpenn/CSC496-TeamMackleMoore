@@ -13,8 +13,8 @@ sudo fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test
 
 ## added by Cameron on 4/25 to test automatic docker creation
 sudo mkdir dockerDir
-sudo cd dockerDir
 sudo curl -o Dockerfile https://raw.githubusercontent.com/mackpenn/CSC496-TeamMackleMoore/docker/Dockerfile
-docker build -t benchmarks .
+sudo mv Dockerfile dockerDir
+docker build -t benchmarks ./dockerDir
 touch streamOutput.txt
 docker run benchmarks ./stream > streamOutput.txt
