@@ -34,8 +34,6 @@ for i in range(4):
     node = request.RawPC("head")
   else:
     node = request.RawPC("worker-" + str(i))
-  node.cores = 4
-  node.ram = 4096
   node.routable_control_ip = "true"
  
   node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU16-64-STD"
