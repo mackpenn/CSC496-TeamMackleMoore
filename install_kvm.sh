@@ -16,6 +16,7 @@ sudo mkdir dockerDir
 sudo curl -o Dockerfile https://raw.githubusercontent.com/mackpenn/CSC496-TeamMackleMoore/docker/Dockerfile
 sudo mv Dockerfile dockerDir
 sudo docker image ls
-sudo docker build -t benchmarks ./dockerDir
+##sudo docker build -t benchmarks ./dockerDir
+sudo docker build -t benchmarks /dockerDir
 sudo touch streamOutput.txt
 sudo docker run benchmarks ./stream > streamOutput.txt
