@@ -9,6 +9,11 @@ RUN apt-get update
 RUN wget https://www.cs.virginia.edu/stream/FTP/Code/mysecond.c
 RUN apt-get install -y gcc
 RUN gcc -O stream.c -o stream
+RUN apt-get update
+RUN apt-get install -qqy fio
+
+
+
 RUN touch StreamOutput.txt
 RUN ./stream > StreamOutput.txt\
 
