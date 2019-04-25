@@ -29,13 +29,13 @@ prefixForIP = "192.168.1."
 
 link = request.LAN("lan")
 
-for i in range(5):
+for i in range(3):
   if i == 0:
     node = request.RawPC("head")
   else:
     node = request.RawPC("worker-" + str(i))
   node.cores = 4
-  node.ram = 4096
+  node.ram = 64000
   node.routable_control_ip = "true"
  
   node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU16-64-STD"
