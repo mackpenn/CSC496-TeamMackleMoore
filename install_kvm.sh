@@ -15,6 +15,6 @@ sudo fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test
 sudo mkdir dockerDir
 sudo curl -o Dockerfile https://raw.githubusercontent.com/mackpenn/CSC496-TeamMackleMoore/docker/Dockerfile
 sudo mv Dockerfile dockerDir
-docker build -t benchmarks ./dockerDir
-touch streamOutput.txt
-docker run benchmarks ./stream > streamOutput.txt
+sudo docker build -t benchmarks ./dockerDir
+sudo touch streamOutput.txt
+sudo docker run benchmarks ./stream > streamOutput.txt
