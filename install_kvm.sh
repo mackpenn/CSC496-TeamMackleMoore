@@ -12,11 +12,3 @@ sudo fio --name=randread --ioengine=libaio --iodepth=16 --rw=randread --bs=4k --
 sudo fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=random_read_write.fio --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=75 > ReadWritePerformance.txt
 
 ## added by Cameron on 4/25 to test automatic docker creation
-sudo mkdir dockerDir
-sudo curl -o Dockerfile https://raw.githubusercontent.com/mackpenn/CSC496-TeamMackleMoore/docker/Dockerfile
-sudo mv Dockerfile dockerDir
-sudo docker image ls
-##sudo docker build -t benchmarks ./dockerDir
-sudo docker build -t benchmarks /dockerDir
-sudo touch streamOutput.txt
-sudo docker run benchmarks ./stream > streamOutput.txt
