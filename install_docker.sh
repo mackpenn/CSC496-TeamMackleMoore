@@ -30,3 +30,6 @@ sudo docker build -t benchmarks ./dockerDir
 ##sudo docker build -t benchmarks /dockerDir
 sudo touch streamOutput.txt
 sudo docker run benchmarks ./stream > streamOutput.txt
+sudo docker run benchmarks fio --name=randwrite --ioengine=libaio --iodepth=1 --rw=randwrite --bs=4k --direct=0 --size=512M --numjobs=2 --runtime=240 --group_reporting > RandomWrite.txt
+sudo docker run benchmarks fio --name=randread --ioengine=libaio --iodepth=16 --rw=randread --bs=4k --direct=0 --size=512M --numjobs=4 --runtime=240 --group_reporting > RandomRead.txt
+sudo docker run benchmarks fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=random_read_write.fio --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=75 > ReadWritePerformance.txt
