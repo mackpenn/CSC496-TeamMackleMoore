@@ -8,8 +8,8 @@ sudo virt-install --name test --connect qemu:///system --ram 10240 --disk path=u
 sudo apt-get update
 ##Test code to compose a Dockerfile locally - will remove sooner or later
 
-touch Dockerfile.txt
-echo -e 'RUN mkdir streamDirectory \ncd streamDirectory \nsudo wget https://www.cs.virginia.edu/stream/FTP/Code/stream.c \nsudo wget https://www.cs.virginia.edu/stream/FTP/Code/mysecond.c \nsudo gcc -O stream.c -o stream \nsudo touch StreamOutput.txt \n./stream > StreamOutput.txt\ \nCMD ["/bin/bash"]' > Dockerfile.txt
+##touch Dockerfile.txt
+##echo -e 'RUN mkdir streamDirectory \ncd streamDirectory \nsudo wget https://www.cs.virginia.edu/stream/FTP/Code/stream.c \nsudo wget https://www.cs.virginia.edu/stream/FTP/Code/mysecond.c \nsudo gcc -O stream.c -o stream \nsudo touch StreamOutput.txt \n./stream > StreamOutput.txt\ \nCMD ["/bin/bash"]' > Dockerfile.txt
 
 mkdir streamDirectory
 cd streamDirectory
