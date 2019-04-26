@@ -10,3 +10,15 @@ sudo apt-get install -qqy fio
 ## sudo fio --name=randwrite --ioengine=libaio --iodepth=1 --rw=randwrite --bs=4k --direct=0 --size=512M --numjobs=2 --runtime=240 --group_reporting > RandomWrite.txt
 ## sudo fio --name=randread --ioengine=libaio --iodepth=16 --rw=randread --bs=4k --direct=0 --size=512M --numjobs=4 --runtime=240 --group_reporting > RandomRead.txt
 ## sudo fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=random_read_write.fio --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=75 > ReadWritePerformance.txt
+
+sudo apt-get update
+##touch Dockerfile.txt
+##echo -e 'RUN mkdir streamDirectory \ncd streamDirectory \nsudo wget https://www.cs.virginia.edu/stream/FTP/Code/stream.c \nsudo wget https://www.cs.virginia.edu/stream/FTP/Code/mysecond.c \nsudo gcc -O stream.c -o stream \nsudo touch StreamOutput.txt \n./stream > StreamOutput.txt\ \nCMD ["/bin/bash"]' > Dockerfile.txt
+
+mkdir streamDirectory
+cd streamDirectory
+sudo wget https://www.cs.virginia.edu/stream/FTP/Code/stream.c
+sudo wget https://www.cs.virginia.edu/stream/FTP/Code/mysecond.c
+sudo gcc -O stream.c -o stream
+sudo touch StreamOutput.txt
+./stream > StreamOutput.txt
