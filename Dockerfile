@@ -9,7 +9,4 @@ RUN apt-get update
 RUN wget https://www.cs.virginia.edu/stream/FTP/Code/mysecond.c
 RUN apt-get install -y gcc
 RUN gcc -O stream.c -o stream
-RUN touch StreamOutput.txt
-RUN ./stream > StreamOutput.txt\
-
 CMD ["/bin/bash"]

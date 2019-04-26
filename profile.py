@@ -29,13 +29,11 @@ prefixForIP = "192.168.1."
 
 link = request.LAN("lan")
 
-for i in range(5):
+for i in range(4):
   if i == 0:
     node = request.RawPC("head")
   else:
     node = request.RawPC("worker-" + str(i))
-  node.cores = 4
-  node.ram = 4096
   node.routable_control_ip = "true"
  
   node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU16-64-STD"
@@ -47,6 +45,7 @@ for i in range(5):
   
   node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/passwordless.sh"))
   node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_kvm.sh"))
+  node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_docker.sh"))
   
 # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
