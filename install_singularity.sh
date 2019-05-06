@@ -20,3 +20,12 @@ sudo make -C builddir install
 sudo singularity build --sandbox ubuntu/ library://ubuntu
 sudo singularity exec --writable ubuntu apt-get update
 sudo singularity exec --writable ubuntu apt-get install -y fio
+
+
+sudo mkdir streamDirectory
+sudo cd streamDirectory
+sudo wget https://www.cs.virginia.edu/stream/FTP/Code/stream.c
+sudo apt-get update
+sudo wget https://www.cs.virginia.edu/stream/FTP/Code/mysecond.c
+sudo apt-get install -y gcc
+sudo gcc -O stream.c -o stream
