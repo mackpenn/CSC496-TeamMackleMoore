@@ -2,7 +2,7 @@ set -x
 sudo apt-get update
 sudo apt-get install -y build-essential libssl-dev uuid-dev libgpgme11-dev squashfs-tools wget git
 export VERSION=1.11 OS=linux ARCH=amd64
-cd \tmp
+cd /tmp
 sudo wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
 sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 echo 'export GOPATH=${HOME}/go' >> ~/.bashrc
